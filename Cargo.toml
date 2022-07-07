@@ -1,0 +1,15 @@
+[package]
+name = "watchmon"
+version = "1.0.0"
+edition = "2021"
+authors = ["Oren Epshtain"]
+
+[[bin]]
+name = "watchmon"
+path = "src/main.rs"
+
+[dependencies]
+notify = "4.0.17"
+anyhow = "1.0.58"
+clap = { version = "3.2.8", features = ["env", "cargo"] }
+shlex = "1.1.0"
