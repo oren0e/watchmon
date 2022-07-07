@@ -4,7 +4,13 @@ A command line utility to watch and monitor for the existence of a specific term
 
 # Installation
 
-Currently the installation is done by cloning this repo and running `make install`. A `crates.io` release is planned.
+Currently the installation is done by:
+
+1. Cloning this repo
+2. Checking if Rust is installed: `make check_rust`. If rust is not installed this will download and install it
+3. Running `make install`
+
+A `crates.io` release is planned.
 
 # Usage
 
