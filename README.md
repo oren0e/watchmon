@@ -14,7 +14,7 @@ A `crates.io` release is planned.
 
 # Usage
 
-Run `watchmon --file <FILE PATH> --text-term <TEXT TERM> --command <BASH COMMAND>`. The program will run forever. For more info run `watchmon --help`.
+Run `watchmon --file <FILE PATH> --text-term <TEXT TERM> --command <BASH COMMAND>`. Use the `-s` flag to indicate that you want to watch special system files (see https://github.com/notify-rs/notify/issues/421). For more info use `watchmon --help`.
 
 # Contribute
 
