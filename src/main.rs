@@ -1,3 +1,6 @@
+//! Watch and monitor a file for the existence of a specific term.
+//! If the file gets changed and the term is no longer there - the specified-by-user bash command
+//! will run. The monitoring service continues to run even after the execution of the command.
 use crate::watching::monitor_file_for_term;
 use anyhow::Result as AnyhowResult;
 use clap::{crate_version, Arg, Command};
