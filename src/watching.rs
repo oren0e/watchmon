@@ -62,12 +62,15 @@ pub fn monitor_file_for_term(
 
         loop {
             match rx.recv() {
-                Ok(event) => {
-                    if let Ok(Event {
+                Ok(event) => match event {
+                    Ok(Event {
                         kind: EventKind::Modify(ModifyKind::Data(DataChange::Content)),
                         ..
-                    }) = event
-                    {
+                    })
+                    | Ok(Event {
+                        kind: EventKind::Modify(ModifyKind::Data(DataChange::Any)),
+                        ..
+                    }) => {
                         let found = look_for_term_in_file(term, &filepath)?;
                         if !found {
                             let mut lex = Shlex::new(cmd);
@@ -84,7 +87,8 @@ pub fn monitor_file_for_term(
                                 .with_context(|| format!("Failed running {}", &args[0]))?;
                         }
                     }
-                }
+                    _ => (),
+                },
                 Err(e) => println!("watch error: {:?}", e),
             }
         }
