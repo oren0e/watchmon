@@ -36,11 +36,21 @@ fn main() -> AnyhowResult<()> {
             .takes_value(true)
             .required(true)
             )
+        .arg(
+            Arg::new("monitor_fs")
+            .short('s')
+            .long("fs-monitor")
+            .value_name("MONITOR FS")
+            .takes_value(false)
+            .help("Monitor system files")
+            )
         .get_matches();
+    let monitor_fs = matches.is_present("monitor_fs");
     monitor_file_for_term(
         matches.value_of("term").expect("`term` is required"),
         matches.value_of("file").expect("`file` is required"),
         matches.value_of("command").expect("`command` is required"),
+        monitor_fs,
     )?;
     Ok(())
 }
