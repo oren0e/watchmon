@@ -1,3 +1,5 @@
+![example workflow name](https://github.com/oren0e/watchmon/workflows/Build/badge.svg)
+
 # Overview
 
 A command line utility to watch and monitor for the existence of a specific term in the contents of a file. If the term is not found in the file the specified bash command gets executed.
