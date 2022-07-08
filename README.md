@@ -1,4 +1,4 @@
-![example workflow name](https://github.com/oren0e/watchmon/workflows/build/badge.svg)
+![example workflow name](https://github.com/oren0e/watchmon/workflows/Build/badge.svg)
 
 # Overview
 
