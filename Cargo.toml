@@ -9,7 +9,7 @@ name = "watchmon"
 path = "src/main.rs"
 
 [dependencies]
-notify = "5.0.0-pre.15"
-anyhow = "1.0.58"
-clap = { version = "3.2.8", features = ["cargo"] }
-shlex = "1.1.0"
+notify = "=5.0.0-pre.15"
+anyhow = "~1.0.58"
+clap = { version = "~3.2.8", features = ["cargo"] }
+shlex = "~1.1.0"
